@@ -9,6 +9,7 @@ import Homepage from "./components/Homepage/Homepage.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CrowdFundCreate from "./components/crowdfunder-create/CrowdFundCreate.js";
 import MyFundraisers from "./components/myFundraisers/MyFundraisers";
+import CrowdFundEdit from "./components/crowdfunder-edit/CrowdFundEdit";
 
 export default () => {
   const [isLoggedIn, setIsloggedIn] = useState(false);
@@ -62,6 +63,9 @@ export default () => {
               path="/createCrowdFounding"
               element={<CrowdFundCreate UserId={UserId} />}
             />
+          )}
+          {isLoggedIn && (
+            <Route path="/mycrowdfunder/:id" element={<CrowdFundEdit />} />
           )}
           {isLoggedIn && (
             <Route
