@@ -17,7 +17,7 @@ And then
 ### - Register User
 ### - Login User
 ### - Main Homepage
-### - Register a Mechanic
+### - Create Mechanic
 ### - All created mechanics list
 ### - Edit mechanics info
 
