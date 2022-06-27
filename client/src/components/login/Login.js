@@ -73,7 +73,7 @@ export default (props) => {
         )}
         <form onSubmit={handleSubmit}>
           <h1 className="h3 mb-3 fw-normal">Log In</h1>
-          <div className="form-floating">
+          <div className="form-floating mb-2">
             <input
               type="email"
               className="form-control"

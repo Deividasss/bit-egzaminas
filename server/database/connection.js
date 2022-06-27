@@ -3,7 +3,6 @@ import mysql from "mysql2/promise";
 import { Sequelize } from "sequelize";
 import { users } from "./model/users.js";
 import { crowdFunder } from "./model/CrowdFunder.js";
-import { donations } from "./model/Donations.js";
 
 const config = await loadJsonFile("./config.json");
 

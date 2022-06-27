@@ -73,7 +73,7 @@ export default () => {
         )}
         <form onSubmit={handleSubmit}>
           <h1 className="h3 mb-3 fw-normal">Sign-Up</h1>
-          <div className="form-floating">
+          <div className="form-floating mb-2">
             <input
               type="text"
               className="form-control"
@@ -83,7 +83,7 @@ export default () => {
             />
             <label>First Name</label>
           </div>
-          <div className="form-floating">
+          <div className="form-floating mb-2">
             <input
               type="text"
               className="form-control"
@@ -93,7 +93,7 @@ export default () => {
             />
             <label>Last Name</label>
           </div>
-          <div className="form-floating">
+          <div className="form-floating mb-2">
             <input
               type="email"
               className="form-control"
@@ -103,7 +103,7 @@ export default () => {
             />
             <label>Email address</label>
           </div>
-          <div className="form-floating">
+          <div className="form-floating mb-2">
             <input
               type="password"
               className="form-control"
@@ -113,7 +113,7 @@ export default () => {
             />
             <label>Password</label>
           </div>
-          <div className="form-floating">
+          <div className="form-floating mb-2">
             <input
               type="password"
               className="form-control"

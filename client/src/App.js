@@ -6,7 +6,6 @@ import Header from "./components/header/Header";
 import Registration from "./components/registration/Registration";
 import Login from "./components/login/Login";
 import Homepage from "./components/Homepage/Homepage.js";
-import AdminArea from "./components/admin_area/AdminArea.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CrowdFundCreate from "./components/crowdfunder-create/CrowdFundCreate.js";
 import MyFundraisers from "./components/myFundraisers/MyFundraisers";
@@ -57,7 +56,6 @@ export default () => {
           {!isLoggedIn && (
             <Route path="/login" element={<Login state={handleLoginState} />} />
           )}
-          {userRole === 1 && <Route path="/admin" element={<AdminArea />} />}
           <Route path="/" element={<Homepage isLoggedIn={isLoggedIn} />} />
           {isLoggedIn && (
             <Route

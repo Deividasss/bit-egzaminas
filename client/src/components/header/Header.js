@@ -22,7 +22,10 @@ export default (props) => {
     <div className="header">
       <div className="ui menu">
         <Link className="item" to="/">
-          Homepage
+          <img
+            src="https://arcarservice.ie/wp-content/uploads/2021/09/logo2.png"
+            alt="logo"
+          />
         </Link>
         <div className="right menu">
           {props.loggedIn === false && (
