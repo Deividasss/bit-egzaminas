@@ -1,0 +1,28 @@
+.h1first {
+    background-image: linear-gradient(to left, orange,rgb(172, 231, 54));
+    border-radius: 50px;
+    font-style: oblique;
+    font-weight: bold;
+    letter-spacing: 5px;
+    line-height: 3.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.h1header {
+    margin-bottom: 0;
+    font-style: oblique;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+
+.h1second {
+    background-image: linear-gradient(to right, orange,rgb(172, 231, 54));
+    border-radius: 50px;
+    font-style: oblique;
+    font-weight: bold;
+    letter-spacing: 5px;
+    line-height: 3.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}

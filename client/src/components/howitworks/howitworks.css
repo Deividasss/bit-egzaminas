@@ -1,0 +1,11 @@
+.gridTable {
+    margin-top: 3rem;
+    text-align: left;
+    background-image: linear-gradient(to right, rgb(250, 250, 56), rgb(243, 192, 97));
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ a {
+    text-decoration: none!important;
+}

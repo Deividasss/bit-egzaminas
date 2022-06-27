@@ -1,0 +1,48 @@
+.crowfunder {
+    max-width: 60%;
+    margin: auto;
+    overflow-wrap: break-word;
+}
+
+.crowfunder > h1 {
+margin-bottom: 1rem;
+}
+
+.crowdfundDescription {
+    margin-top: 2rem;
+    text-align: justify;
+}
+.crowdfunderPBar {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.crowdfunderPicture {
+    max-width: 100%;
+    max-height: fit-content;
+    opacity: 0.7;
+}
+
+.donationForm {
+    background-image: linear-gradient(to right, yellow, limegreen);
+    border-radius: 1.5rem;
+    max-width: 30%;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.comments {
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.LogInToDonate {
+    background-color: red;
+    color: white;
+    max-width: 30%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}

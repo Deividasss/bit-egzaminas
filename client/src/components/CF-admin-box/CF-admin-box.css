@@ -1,0 +1,9 @@
+.adminHeadline {
+    padding-bottom: 1rem;
+    font-size: large;
+}
+
+.adminDescription {
+    font-weight: 400;
+    text-align: justify;
+}

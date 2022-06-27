@@ -1,0 +1,22 @@
+.progress{
+    background-color: blue;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.55);
+  
+    width: 80%;
+    height: 12px;
+    
+    position: relative;
+    display:inline;
+    justify-content: center;
+  }
+
+ span {
+      color: black;
+      font-weight: bold;
+      padding-left: 2px;
+  }
+
+  progress::-moz-progress-bar { background: rgb(245, 245, 134); }
+progress::-webkit-progress-value { background: yellowgreen; }
+progress { color: yellowgreen; }

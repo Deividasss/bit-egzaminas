@@ -1,0 +1,17 @@
+.crowdFundEdit h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+ label {
+    text-align: left;
+}
+
+.statuscf {
+    background-color: rgb(247, 206, 130);
+    border-radius: 25px;
+    margin: auto;
+    padding: 1rem;
+    width: fit-content;
+}

@@ -1,0 +1,20 @@
+.comment-box {
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: aliceblue;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    text-align: justify;
+    width: 50%;
+}
+.commentText {
+    overflow-wrap: break-word;
+}
+.commentAuthor {
+    font-weight: bolder;
+}
+.commentDonation {
+    font-weight: bolder;
+    padding-top: 5px;
+}
