@@ -4,6 +4,7 @@ import "./Registration.css";
 import Alert from "react-bootstrap/Alert";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Button from "react-bootstrap/esm/Button";
 
 export default () => {
   const navigate = useNavigate();
@@ -122,9 +123,9 @@ export default () => {
             />
             <label>Confirm Password</label>
           </div>
-          <button className="w-100 btn btn-lg btn-primary" type="submit">
+          <Button className="w-100 btn btn-lg item ui button" type="submit">
             Register
-          </button>
+          </Button>
         </form>
       </main>
     </div>

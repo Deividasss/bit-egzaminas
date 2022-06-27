@@ -37,10 +37,10 @@ export default (props) => {
   const List = () => {
     if (crowdFund.length < 1) {
       return (
-        <div>
-          <h3 style={{ color: "red" }}>No fundraisers has been created</h3>
-          <Link className="item ui button primary" to="/createCrowdFounding">
-            <strong>Click me to create One!</strong>
+        <div className="meistraiall">
+          <h3 className="meistrainull">Nėra pridėtų meistrų</h3>
+          <Link className="item ui button" to="/createCrowdFounding">
+            <strong>Pridėti meistra!</strong>
           </Link>
         </div>
       );
@@ -60,7 +60,7 @@ export default (props) => {
 
   return (
     <Container>
-      <h1 className="h1header">My Fundraisers</h1>
+      <h1 className="h1header">Meistrai</h1>
       {messages.message && (
         <Alert variation={messages.status}>{messages.message}</Alert>
       )}

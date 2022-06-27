@@ -95,73 +95,11 @@ Router.post("/create", auth, upload.single("cf_image"), async (req, res) => {
   console.log(req.file);
   req.body.cf_image = req.file.filename;
   if (await insert(req.body)) {
-    res.json({ status: "success", message: "Fund raiser was created" });
+    res.json({ status: "success", message: "Meistras sėkmingai pridėtas" });
   } else {
     res.json({ status: "danger", message: "Error" });
   }
-  // if (req.files.cf_image) {
-  //   let path = req.files.cf_image[0].path.replaceAll("\\", "/");
-  //   req.body.cf_image = path;
-  // }
-
-  // let ProfileId = false;
-  // if ((ProfileId = await insert(req.body))) {
-  //   req.files.portfolio_items.map(async (image) => {
-  //     let path = image.path.replaceAll("\\", "/");
-  //     await portfolioInsert({ image_url: path, ProfileId });
-  //   });
-  //   res.json({ status: "success", message: "Fundraiser successfully created" });
-  // } else {
-  //   res.json({ status: "danger", message: "Error occured creating crowdfunder" });
-  // }
 });
-
-// Router.post('/upload',upload.single('profile_image'), profileSchema, async (req,res) => {
-//     res.send('Done')
-// })
-
-// Router.get("/filter/cf_goal/:rate", async (req, res) => {
-//   const rate = req.params.rate;
-//   const crowdfunder = await getAll({
-//     where: {
-//       hourly_rate: {
-//         [Op.gte]: rate
-//       },
-//     },
-//   });
-
-//   if (crowdfunder) {
-//     res.json({ status: "success", message: crowdfunder });
-//   } else {
-//     res.json({ message: "An error has occured", status: "danger" });
-//   }
-// });
-
-// Router.get("/sort/DESC", async (req, res) => {
-//   const crowdfunder = await getAll({order: [
-//     ['headline', 'DESC']
-//   ]});
-
-//   if (crowdfunder) {
-//     res.json({ status: "success", message: crowdfunder });
-//   } else {
-//     res.json({ message: "Error occured", status: "danger" });
-//   }
-// });
-
-// Router.get("/sort/asc", async (req, res) => {
-//   const crowdfunder = await getAll({
-//     order: [
-//       ['headline', 'ASC']
-//     ]
-// });
-
-//   if (crowdfunder) {
-//     res.json({ status: "success", message: crowdfunder });
-//   } else {
-//     res.json({ message: "Error has occured", status: "danger" });
-//   }
-// });
 
 Router.get("/single/:id", async (req, res) => {
   const id = req.params.id;
@@ -173,24 +111,15 @@ Router.get("/single/:id", async (req, res) => {
   }
 });
 
-// // const crowfunderFields = upload.fields([
-// //   { name: "cf_goal", maxCount: 1 },
-// //   { name: "portfolio_items", maxCount: 20 },
-// // ]);
-
-// // Router.post('/upload',upload.single('profile_image'), profileSchema, async (req,res) => {
-// //     res.send('Done')
-// // })
-
 Router.delete("/delete/:id", async (req, res) => {
   const id = req.params.id;
   console.log(id);
 
   try {
     await _delete(id);
-    res.json({ status: "success", message: "Crowdfunder was deleted" });
+    res.json({ status: "success", message: "Meistras ištrintas" });
   } catch {
-    res.json({ status: "danger", message: "Crowdfunder was not deleted" });
+    res.json({ status: "danger", message: "Meistras nebuvo ištrintas" });
   }
 });
 
@@ -200,33 +129,11 @@ Router.put("/update/:id", async (req, res) => {
 
   try {
     await _update(id, crowdfunder);
-    res.json({ status: "success", message: "crowdfunder was updated" });
+    res.json({ status: "success", message: "Meistro informacija atnaujinta" });
   } catch {
-    res.json({ status: "danger", message: "crowdfunder was not renewed" });
+    res.json({ status: "danger", message: "Meistro informacija nebuvo atnaujinta" });
   }
 });
 
-// Router.get('/edit/:user_id', auth, async (req, res) => {
-//   const user_id = req.params.user_id
-//   let crowdfunder = await getByUserId(user_id);
-//   if (crowdfunder) {
-//     const portfolio = await portfolioItems(profile.id);
 
-//     if (portfolio) profile.portfolio = portfolio;
-//     res.json({ status: "success", message: profile });
-//   } else {
-//     res.json({ status: "danger", message: "Nepavyko surasti profilio" });
-//   }
-// });
-
-// Router.put('/update/', auth, crowdfunderSchema, async (req, res) => {
-//   const user_id = req.body.UserId
-//   const crowdfunder = await getByUserId(user_id)
-
-//   if(await _update(crowdfunder.id, req.body)) {
-//     res.json({message: 'Crowdfunder was successfully renwed', status: 'success'})
-//   }else {
-//     res.json({message: 'An error has occured', status: 'danger'})
-//   }
-// })
 export default Router;

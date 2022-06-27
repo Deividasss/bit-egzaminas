@@ -5,7 +5,6 @@ import auth from "./middleware/authentication.js";
 import { getUser } from "./service/users.js";
 import cookieParser from "cookie-parser";
 import crowdfunder from "./controller/crowdFunder.js";
-import donations from "./controller/donations.js";
 
 const app = express();
 
@@ -20,7 +19,6 @@ app.use(cookieParser());
 app.use("/uploads", express.static("uploads"));
 app.use("/api/users", users);
 app.use("/api/crowdfunder", crowdfunder);
-app.use("/api/donations", donations);
 
 app.get("/checkAuth", auth, async (req, res) => {
   const userData = await getUser(req.authData.id);

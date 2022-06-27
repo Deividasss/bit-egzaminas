@@ -1,3 +1,15 @@
-.row {
-    margin-top: 2rem;
+
+.h1header{
+    text-align: center;
+    font-weight: bold;
+    padding: 3% 0 4% 0;
+}
+
+.meistrainull{
+    text-align: center;
+    color: rgb(199, 34, 34);
+    font-weight: bold;
+}
+.meistraiall{
+    text-align: center;
 }

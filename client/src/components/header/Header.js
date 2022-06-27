@@ -21,20 +21,8 @@ export default (props) => {
   return (
     <div className="header">
       <div className="ui menu">
-        <div style={{ padding: "1rem" }}>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/4/4a/GoFundMe_logo.svg"
-            alt="goFundMe logo"
-          />
-        </div>
         <Link className="item" to="/">
           Homepage
-        </Link>
-        <Link className="item" to="/howitworks">
-          How it works
-        </Link>
-        <Link className="item" to="/fundraisers">
-          Current/Past Fundraisers
         </Link>
         <div className="right menu">
           {props.loggedIn === false && (
@@ -49,18 +37,12 @@ export default (props) => {
           )}
           {props.loggedIn === true && props.userRole === 0 && (
             <Link className="item" to="/myCrowdfunders">
-              Your Fundraisers
+              Meistrai
             </Link>
           )}
           {props.loggedIn === true && props.userRole === 0 && (
             <Link className="item" to="/createCrowdFounding">
-              <strong>Create a Crowdfunder</strong>
-            </Link>
-          )}
-
-          {props.userRole === 1 && (
-            <Link className="item" to="/admin">
-              Admin panel
+              <strong>Pridėti Meistrą</strong>
             </Link>
           )}
           {props.loggedIn === true && (

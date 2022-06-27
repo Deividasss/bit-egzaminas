@@ -1,8 +1,26 @@
 .crowdFundCreate h1 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
+.crowdFundCreate {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
 
- label {
+label {
     text-align: left;
+}
+
+.formInput{
+    background-color: aqua;
+}
+
+.submitbtn {
+    background-color: rgb(133, 250, 129);
+    padding: 10px 30px 10px 30px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.submitbtn:hover {
+    background-color: rgb(85, 235, 80);
 }

@@ -25,7 +25,6 @@ try {
 
   database.Users = users(sequelize);
   database.CrowdFunder = crowdFunder(sequelize);
-  database.Donations = donations(sequelize);
 
   await sequelize.sync({ alter: false });
 } catch {

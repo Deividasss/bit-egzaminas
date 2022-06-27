@@ -8,12 +8,8 @@ import Login from "./components/login/Login";
 import Homepage from "./components/Homepage/Homepage.js";
 import AdminArea from "./components/admin_area/AdminArea.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import HowItWorks from "./components/howitworks/HowItWorks.js";
 import CrowdFundCreate from "./components/crowdfunder-create/CrowdFundCreate.js";
-import CFlist from "./components/CfList/CfList.js";
 import MyFundraisers from "./components/myFundraisers/MyFundraisers";
-import CrowdFundEdit from "./components/crowdfunder-edit/CrowdFundEdit";
-import Fundraiser from "./components/fundraiser/Fundraiser";
 
 export default () => {
   const [isLoggedIn, setIsloggedIn] = useState(false);
@@ -63,27 +59,18 @@ export default () => {
           )}
           {userRole === 1 && <Route path="/admin" element={<AdminArea />} />}
           <Route path="/" element={<Homepage isLoggedIn={isLoggedIn} />} />
-          <Route path="/howitworks" element={<HowItWorks />} />
           {isLoggedIn && (
             <Route
               path="/createCrowdFounding"
               element={<CrowdFundCreate UserId={UserId} />}
             />
           )}
-          <Route path="/fundraisers" element={<CFlist />} />
           {isLoggedIn && (
             <Route
               path="/mycrowdfunders"
               element={<MyFundraisers UserId={UserId} />}
             />
           )}
-          {isLoggedIn && (
-            <Route path="/mycrowdfunder/:id" element={<CrowdFundEdit />} />
-          )}
-          <Route
-            path="/crowdfunder/:id"
-            element={<Fundraiser loggedIn={isLoggedIn} />}
-          />
         </Routes>
       </Router>
     </div>

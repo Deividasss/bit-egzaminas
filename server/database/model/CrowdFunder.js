@@ -3,15 +3,17 @@ import { users } from "./users.js";
 
 export const crowdFunder = (sequelize) => {
   const schema = {
-    headline: { type: DataTypes.STRING, allowNull: false },
+    name: { type: DataTypes.STRING, allowNull: false },
+    last_name: { type: DataTypes.STRING, allowNull: false },
+    specialization: { type: DataTypes.STRING, allowNull: false },
     cf_image: { type: DataTypes.STRING, allowNull: false },
-    description: { type: DataTypes.TEXT, allowNull: false },
-    cf_goal: { type: DataTypes.INTEGER, allowNull: false },
+    servise_name: { type: DataTypes.TEXT, allowNull: false },
+    city: { type: DataTypes.INTEGER, allowNull: false },
     approved: { type: DataTypes.INTEGER },
     success: { type: DataTypes.INTEGER },
   };
 
-  const CrowdFunder = sequelize.define("CrowdFunder", schema);
+  const CrowdFunder = sequelize.define("Meistrai", schema);
   const Users = users(sequelize);
 
   Users.hasOne(CrowdFunder);

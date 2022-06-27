@@ -1,5 +1,7 @@
 .header {
     margin-bottom: 30px;
+    padding: 10px;
+    position: sticky;
 }
 .body {
     padding-top: 0;

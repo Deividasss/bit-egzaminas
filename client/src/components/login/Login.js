@@ -4,6 +4,7 @@ import "./Login.css";
 import Alert from "react-bootstrap/Alert";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Button from "react-bootstrap/esm/Button";
 
 export default (props) => {
   const navigate = useNavigate();
@@ -92,9 +93,9 @@ export default (props) => {
             />
             <label>Password</label>
           </div>
-          <button className="w-100 btn btn-lg btn-primary" type="submit">
+          <Button className="w-100 btn btn-lg item ui button" type="submit">
             Sign in
-          </button>
+          </Button>
         </form>
       </main>
     </div>

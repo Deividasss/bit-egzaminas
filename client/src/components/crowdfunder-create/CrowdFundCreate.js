@@ -6,17 +6,17 @@ import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import "./crowdfundcreate.css";
 
-// const UserId = 3 //Statinsi userio ID kuri veliau keisime
-
 export default (props) => {
   const UserId = props.UserId;
   const navigate = useNavigate();
 
   const [cfForm, setcfForm] = useState({
-    headline: "",
+    name: "",
+    last_name: "",
+    specialization: "",
     cf_image: "",
-    description: "",
-    cf_goal: "1000",
+    servise_name: "",
+    city: "",
     approved: 0,
     success: 0,
     UserId: UserId,
@@ -49,13 +49,11 @@ export default (props) => {
     console.log(cfForm);
     if (!handleValidation()) {
       setMessages({
-        message: "Crowdfunder form was filled in incorrectly",
+        message: "Meistro pridėjimo forma užpildyta neteisingai",
         status: "danger",
       });
       return false;
     }
-
-    // cfForm.UserId = UserId
 
     const form = new FormData();
     Object.entries(cfForm).map((data) => {
@@ -83,26 +81,48 @@ export default (props) => {
         {messages.message && (
           <Alert variation={messages.status}>{messages.message}</Alert>
         )}
-        <h1>Crowdfunder creation</h1>
+        <h1>Meistro pridėjimo forma</h1>
         <form className="ui form" onSubmit={handleSubmit}>
           <div className="field mb-3">
-            <label className="form-label">Headline</label>
+            <label className="form-label">Vardas</label>
             <input
               type="text"
-              name="headline"
+              name="name"
               className="form-control"
-              placeholder="Enter your Headline"
-              value={cfForm.headline}
+              placeholder="Meistro Vardas"
+              value={cfForm.name}
               onChange={handleInputChange}
             />
           </div>
           <div className="field mb-3">
-            <label className="form-label">Crowdfunding Image</label>
+            <label className="form-label">Pavardė</label>
+            <input
+              type="text"
+              name="last_name"
+              className="form-control"
+              placeholder="Meistro Pavardė"
+              value={cfForm.last_name}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="field mb-3">
+            <label className="form-label">Specializacija</label>
+            <input
+              type="text"
+              name="specialization"
+              className="form-control"
+              placeholder="Meistro specializacija"
+              value={cfForm.specialization}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="field mb-3">
+            <label className="form-label">Meistro Profilio Nuotrauką</label>
             <input
               type="file"
               name="cf_image"
               className="form-control"
-              placeholder="upload your image"
+              placeholder="Meistro Profilio Nuotrauką"
               onChange={(e) =>
                 setcfForm({
                   ...cfForm,
@@ -112,31 +132,30 @@ export default (props) => {
             />
           </div>
           <div className="field mb-3">
-            <label className="form-label">Description</label>
-            <textarea
+            <label className="form-label">Serviso pavadinimas</label>
+            <input
               className="form-control"
               rows="3"
-              name="description"
-              value={cfForm.description}
+              name="servise_name"
+              placeholder="Serviso pavadinimas"
+              value={cfForm.servise_name}
               onChange={handleInputChange}
-            ></textarea>
+            ></input>
           </div>
           <div className="field mb-3">
-            <label className="form-label">
-              Crowdfunding goal(in dollars $){" "}
-            </label>
+            <label className="form-label">Miestas</label>
             <input
-              type="number"
-              name="cf_goal"
-              className="form-control"
-              value={cfForm.cf_goal}
-              min="0"
+              type="text"
+              name="city"
+              className="formInput"
+              placeholder="Miestas"
+              value={cfForm.city}
               onChange={handleInputChange}
             />
           </div>
 
-          <Button type="submit" variant="primary">
-            Create a crowdfunder
+          <Button className="item ui button" type="submit" variant="primary">
+            Pridėti Meistrą
           </Button>
         </form>
       </div>
