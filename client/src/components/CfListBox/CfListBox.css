@@ -2,10 +2,12 @@
     margin: auto;
     text-align: center;
     font-weight: bold;
+    color: black;
 }
 .card_body{
     background-color: rgb(152, 220, 143);
     border-radius: 10px;
+    text-decoration: none;
 }
 
 .text-muted {
@@ -17,4 +19,7 @@
     max-width: 300px;
     margin: 20px 0 20px 60px;
     border-radius: 10px;
+}
+.boxLink{
+    text-decoration: none;
 }

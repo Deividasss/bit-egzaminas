@@ -8,7 +8,7 @@ export const crowdFunder = (sequelize) => {
     specialization: { type: DataTypes.STRING, allowNull: false },
     cf_image: { type: DataTypes.STRING, allowNull: false },
     servise_name: { type: DataTypes.TEXT, allowNull: false },
-    city: { type: DataTypes.INTEGER, allowNull: false },
+    city: { type: DataTypes.STRING, allowNull: false },
     approved: { type: DataTypes.INTEGER },
     success: { type: DataTypes.INTEGER },
   };

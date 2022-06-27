@@ -24,7 +24,7 @@ export default (props) => {
 
   return (
     <div className="col-sm-4">
-      <Link to={`${props.link}` + props.crowdfunder.id}>
+      <Link className="boxLink" to={`${props.link}` + props.crowdfunder.id}>
         <div className="card_body">
           <img
             className="cf_image"

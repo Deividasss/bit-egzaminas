@@ -105,21 +105,6 @@ export default (CrowdFundEdit) => {
       });
   };
 
-  const statusHandler = () => {
-    if (cfForm.approved === 0) {
-      return <span style={{ color: "red" }}>Pending</span>;
-    } else {
-      return <span style={{ color: "green" }}>Approved</span>;
-    }
-  };
-
-  const successHandler = () => {
-    if (cfForm.success === 0) {
-      return <span style={{ color: "red" }}>Still not completed</span>;
-    } else {
-      return <span style={{ color: "green" }}>Fundraiser completed</span>;
-    }
-  };
 
   return (
     <Container>
@@ -130,9 +115,7 @@ export default (CrowdFundEdit) => {
           {messages.message && (
             <Alert variation={messages.status}>{messages.message}</Alert>
           )}
-          <div className="statuscf">
-          </div>
-          <h1>Edit your crowdfunder</h1>
+          <h1>Tvarkykite sukurtą meistro anketą</h1>
           <div className="imageDiv">
             <img
               className="cf_image"
@@ -152,55 +135,48 @@ export default (CrowdFundEdit) => {
                 onChange={handleInputChange}
               />
             </div>
-            {/* <div className="field mb-3">
-            <label className="form-label">Crowdfunding Image</label>
-            <input type="file" name="cf_image" className="form-control" onChange={(e) => setcfForm({
-            ...cfForm, [e.target.name]:e.target.files[0] }) } />
-        </div> */}
             <div className="field mb-3">
-              <label className="form-label">Description</label>
-              <textarea
+              <label className="form-label">Pavardė</label>
+              <input
                 className="form-control"
                 rows="9"
                 name="last_name"
                 value={cfForm.last_name}
                 onChange={handleInputChange}
-              ></textarea>
+              ></input>
             </div>
             <div className="field mb-3">
-              <label className="form-label">Description</label>
-              <textarea
+              <label className="form-label">Specializacija</label>
+              <input
                 className="form-control"
                 rows="9"
                 name="specialization"
                 value={cfForm.specialization}
                 onChange={handleInputChange}
-              ></textarea>
+              ></input>
             </div>
             <div className="field mb-3">
-              <label className="form-label">Description</label>
-              <textarea
+              <label className="form-label">Serviso pavadinimas</label>
+              <input
                 className="form-control"
                 rows="9"
                 name="servise_name"
                 value={cfForm.servise_name}
                 onChange={handleInputChange}
-              ></textarea>
+              ></input>
             </div>
             <div className="field mb-3">
-              <label className="form-label">Description</label>
-              <textarea
+              <label className="form-label">Miestas</label>
+              <input
                 className="form-control"
                 rows="9"
                 name="city"
                 value={cfForm.city}
                 onChange={handleInputChange}
-              ></textarea>
+              ></input>
             </div>
-
-
-            <Button type="submit" variant="primary">
-              Update a crowdfunder
+            <Button type="submit" className="item ui button">
+              Išsaugoti pakeitimus
             </Button>
           </form>
         </div>
